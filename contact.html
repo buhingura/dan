@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Basic Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+       
+
+        .container {
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+            body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        ol{
+            color: black;
+        }
+        
+        
+       
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            
+        }
+        li {
+            float: left;
+            color: #ddd;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 24pt;
+        }
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: #246824;
+        }
+        li.dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color:#f1f1f1;
+            min-width: 140px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+        
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align:left;
+        }
+        .dropdown-content a:hover {
+            background-color: rgb(113, 153, 60);
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+            
+        }
+        
+        .hidden{display: none;}
+
+        
+        /* Label styling */
+        .dropdown-label {
+            font-size: 16px;
+            margin-right: 10px;
+            color: #333;
+        }
+
+        /* Dropdown styling */
+        .dropdown {
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Change background color on hover */
+        
+
+        /* Change background color and border on focus */
+        .dropdown:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: calc(100vh - 100px); /* Adjust height based on navbar height */
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text contrast */
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 1em;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #61ff73;
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff4b3a;
+        }
+
+        /* Footer */
+       
+body{
+    background-image: url('bk4.png');
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+p {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Navbar */
+header {
+    background-color: #cf1c1c;
+    padding: 1em 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    color: #fff;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .nav-links a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Contact Page Styles */
+.contact-page {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em 0;
+}
+
+.contact-form, .contact-info {
+    background-color: #f9f9f9;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+/* Contact Form Styles */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact-form label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.contact-form button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 0.75em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #ff4f41;
+}
+
+/* Contact Information Styles */
+.contact-info ul {
+    list-style: none;
+    padding: 1em 0;
+    color: #333;
+}
+
+.contact-info li {
+    margin: 0.5em 0;
+}
+
+/* Map Placeholder Styles */
+.map-placeholder {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.map {
+    width: 100%;
+    height: 200px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #555;
+    border-radius: 4px;
+}
+.home-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #444;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .home-button:hover {
+      background-color: #666;
+    }
+    footer{
+        background-color: #cf1c1c;
+        height: 5%;
+        text-align: center;
+        font-size: x-large;
+    }
+    table{
+        margin-left: 25%;
+    }
+
+/* Footer */
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1><b>DAN'S SHOP</b></h1>
+    <table>
+        <tr>
+        <td><ul>
+            <li>
+                <a class="active" href="index.html">HOME</a>
+            
+
+            <li class="dropdown" class="active"><a class="dropbtn" href="#PRODUCTS">PROUDUCTS</a>
+                <div class="dropdown-content">
+                    <a href="electronics.html">Electronics</a>
+                    <a href="clothes.html">clothes</a>
+                    <a href="books.html">books</a>
+                    <a href="sneaker.html">sneakers</a>
+                    <a href="home.html">home products</a>
+                
+                
+
+
+                </div>
+            </li>
+
+          
+            <li><a href="about us.html"class="active" >ABOUT US</a></li>
+
+
+        </ul></td>
+        </tr>
+    </table>
+
+    <!-- Contact Page Main Section -->
+    <section class="contact-page">
+        <h1>Contact Us</h1>
+        <p>If you have any questions, feel free to reach out to us. We're here to help!</p>
+
+        <div class="contact-container">
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form action="#" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Our Contact Information</h2>
+                <p>You can also reach us via the following methods:</p>
+                <ul>
+                    <li>Email: support@dan'sshop.com</li>
+                    <li>Phone: +2507880685432</li>
+                    <li>Address: 123 Market Street, NYAGATARE, NY</li>
+                </ul>
+
+                <!-- Map Placeholder -->
+                <div class="map-placeholder">
+                    <p>Our Location</p>
+                    <div class="map">[Map Placeholder]</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a href="index.html" class="home-button">Back to Home</a>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 DAN'S Shop. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

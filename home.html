@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Home Products Store</title>
+  <style>
+    /* General Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Body and Layout Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('bk1.png');
+      color: #333;
+    }
+
+    header {
+      background-color: #444;
+      color: #fff;
+      padding: 1.5em;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    /* Grid and Product Card Styling */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5em;
+      padding: 2em;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1em;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 0.5em;
+    }
+
+    .product-card h2 {
+      font-size: 1.2em;
+      margin: 0.5em 0;
+      color: #333;
+    }
+
+    .product-card p {
+      font-size: 1.1em;
+      color: #777;
+    }
+
+    .product-card button {
+      background-color: #444;
+      color: #fff;
+      border: none;
+      padding: 0.6em 1.2em;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 0.5em;
+    }
+
+    .product-card button:hover {
+      background-color: #666;
+    }
+    .home-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #444;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .home-button:hover {
+      background-color: #666;
+    }
+    ol{
+            color: black;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 24pt;
+        }
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: #246824;
+        }
+        li.dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color:#f1f1f1;
+            min-width: 140px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+        
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align:left;
+        }
+        .dropdown-content a:hover {
+            background-color: rgb(113, 153, 60);
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+            
+        }
+        
+        .hidden{display: none;}
+
+        
+        /* Label styling */
+        .dropdown-label {
+            font-size: 16px;
+            margin-right: 10px;
+            color: #333;
+        }
+
+        /* Dropdown styling */
+        .dropdown {
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        h1{
+            color: silver;
+            text-align: center;
+        }
+
+        /* Change background color on hover */
+        
+
+        /* Change background color and border on focus */
+        .dropdown:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        table{
+        margin-left: 25%;
+    }
+    footer{
+      background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+            position: absolute;
+            bottom:5 ;
+    }
+
+
+  </style>
+</head>
+<body>
+  <h1><b>DAN'S SHOP</b></h1>
+  <table>
+      <tr>
+      <td><ul>
+          <li>
+              <a class="active" href="index.html">HOME</a>
+          
+
+          <li class="dropdown" class="active"><a class="dropbtn" href="#PRODUCTS">PROUDUCTS</a>
+              <div class="dropdown-content">
+                  <a href="electronics.html">Electronics</a>
+                  <a href="clothes.html">clothes</a>
+                  <a href="books.html">books</a>
+                  <a href="sneaker.html">sneakers</a>
+                  <a href="home.html">home products</a>
+              
+              
+
+
+              </div>
+          </li>
+
+          <li><a href="contact.html"class="active" >CONTACT</a></li>
+          <li><a href="about us.html"class="active" >ABOUT US</a></li>
+
+
+      </ul></td>
+      </tr>
+  </table>
+    <h1>Welcome to the Home Products Store</h1>
+  
+
+  <section class="product-grid">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="blender.png" alt="Blender">
+      <h2>High-Power Blender</h2>
+      <p>$89.99</p>
+      <button>add to cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="vaccum.png" alt="Vacuum Cleaner">
+      <h2>Vacuum Cleaner</h2>
+      <p>$129.99</p>
+      <button>add to cart</button>
+    </div>
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="lamps.png" alt="table lamps">
+      <h2>Table lamps</h2>
+      <p>$129.99</p>
+      <button>add to cart</button>
+    </div>
+
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="air.png" alt="Air Fryer">
+      <h2>Air Fryer</h2>
+      <p>$99.99</p>
+      <button>add to cart</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="coffe.png" alt="Coffee Maker">
+      <h2>Coffee Maker</h2>
+      <p>$69.99</p>
+      <button>add to cart</button>
+    </div>
+     <!-- Product 4 -->
+     <div class="product-card">
+      <img src="jugs.png" alt="jugs">
+      <h2>Jugs</h2>
+      <p>$69.99</p>
+      <button>add to cart</button>
+    </div>
+ <!-- Product 4 -->
+ <div class="product-card">
+  <img src="plates.png" alt="plates">
+  <h2>Plates</h2>
+  <p>$69.99</p>
+  <button>add to cart</button>
+</div>
+ <!-- Product 4 -->
+ <div class="product-card">
+  <img src="cups.png" alt="cups">
+  <h2>Cups</h2>
+  <p>$69.99</p>
+  <button>add to cart</button>
+</div>
+ <!-- Product 4 -->
+ <div class="product-card">
+  <img src="pans.png" alt="sourcepans">
+  <h2>sourcepans</h2>
+  <p>$69.99</p>
+  <button>add to cart</button>
+</div>
+ <!-- Product 4 -->
+ <div class="product-card">
+  <img src="sheets.png" alt="bed sheets">
+  <h2>Bed sheets</h2>
+  <p>$69.99</p>
+  <button>add to cart</button>
+</div>
+
+
+    <!-- Product 5 -->
+    <div class="product-card">
+      <img src="slice.png" alt="Toaster">
+      <h2>2-Slice Toaster</h2>
+      <p>$29.99</p>
+      <button>add to cart</button>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-card">
+      <img src="rice.png" alt="Rice Cooker">
+      <h2>Rice Cooker</h2>
+      <p>$49.99</p>
+      <button>add to cart</button>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2024 Dan's Shop. All rights reserved.</p>
+</footer>
+</body>
+</html>
